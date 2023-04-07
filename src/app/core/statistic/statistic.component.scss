@@ -1,0 +1,37 @@
+@import '../../../vars';
+@import '../../../mixins';
+
+.statistic {
+  border: 1px solid $border;
+  border-radius: 21px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 30px;
+  background-color: $white;
+  text-align: center;
+  position: relative;
+  margin-bottom: 70px;
+  &__block {
+      flex-grow: 1;
+      position: relative;
+      &:not(:last-child)::before {
+          content: '';
+          position: absolute;
+          display: block;
+          width: 1px;
+          height: calc(100% + 40px);
+          z-index: 5;
+          top: -20px;
+          right: 0;
+          background-color: $border;
+      }
+  }
+  &__title {
+      @include text($f-mon, 700, 4rem, 5rem, $title);
+      margin-bottom: 2px;
+  }
+  &__text {
+      @include text($ff, 400, 1.6rem, 2rem, $text);
+  }
+}

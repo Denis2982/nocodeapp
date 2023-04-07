@@ -1,0 +1,16 @@
+@import '../../../vars';
+@import '../../../mixins';
+
+.faq {
+  margin-bottom: 20px;
+
+}
+
+.title--faq {
+  margin-bottom: 51px;
+  text-align: center;
+  @include mobile{
+      padding: 20px;
+      margin-bottom: 30px;
+  }
+}

@@ -1,0 +1,25 @@
+<div class="container">
+  <header class="header">
+    <a [class.--active]="tab === 1" (click)="tab = 1" routerLink="/" class="logo">
+      <img src="../../../assets/images/Logo.svg" alt="logo No Code">
+    </a>
+    <nav class="nav">
+      <ul class="nav__list">
+        <li class="nav__list-item">
+            <a class="nav__list-link" [class.--active]="tab === 2" (click)="tab = 2" routerLink="topics">Course topics</a>
+        </li>
+        <li class="nav__list-item">
+            <a class="nav__list-link" [class.--active]="tab === 3" (click)="tab = 3" routerLink="students">What students say</a>
+        </li>
+      </ul>
+      <div class="nav__sign">
+        <a href="#" class="nav__sign-link">Sign in</a>
+        <a href="#" class="btn btn--header">Get started</a>
+      </div>
+    </nav>
+    <div class="nav__burger">
+      <span></span>
+    </div>
+  </header>
+</div>
+

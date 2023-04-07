@@ -1,0 +1,27 @@
+<section class="info">
+  <div class="container">
+    <div class="info__inner">
+      <h3 class="title title--info">What you’ll learn</h3>
+      <p class="subtitle subtitle--info">
+        Create beautiful webflow sites with flowbase. Clone for
+        free and get started building a site today.
+      </p>
+
+      <div *ngFor="let block of blocks" class="info__block">
+        <div class="info__block-icon">
+          <img src="../../../assets/images/Icon-learn.svg" alt="icon info">
+        </div>
+        <div class="info__block-desc">
+          <p [title]="block.title" class="info__block-title">{{block.title}}</p>
+          <p *ngIf="block.desc" class="info__block-text">{{block.desc}}</p>
+        </div>
+        <a class="btn btn--info" href="#">
+          <span>6 videos</span>
+          <span>4.5 hours</span>
+        </a>
+      </div>
+
+      
+    </div>
+  </div>
+</section>
